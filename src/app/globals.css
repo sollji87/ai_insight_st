@@ -1,26 +1,391 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   ST Insight - 경영실적 보고서 웹앱 스타일
+   ============================================ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* === 기본 리셋 & 폰트 === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  font-size: 9px;
+  color: #333;
+  background: #f0f2f5;
+  line-height: 1.3;
+}
+
+/* === 툴바 === */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-brand {
+  font-size: 14px;
+  font-weight: 800;
+  color: #60a5fa;
+  letter-spacing: -0.5px;
+}
+
+.toolbar-divider {
+  color: #475569;
+  font-size: 14px;
+}
+
+.toolbar-title {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.toolbar-center {
+  display: flex;
+  gap: 4px;
+  background: rgba(255,255,255,0.05);
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 6px;
+}
+
+.toolbar-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #cbd5e1;
+  background: transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.toolbar-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.toolbar-btn.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.4);
+}
+
+.toolbar-btn.save-btn {
+  background: #059669;
+  color: white;
+}
+
+.toolbar-btn.save-btn:hover {
+  background: #047857;
+}
+
+.toolbar-btn.reset-btn:hover {
+  background: rgba(239,68,68,0.2);
+  color: #f87171;
+}
+
+.unsaved-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fbbf24;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* === 편집 모드 배너 === */
+.edit-banner {
+  padding: 8px 20px;
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 11px;
+  text-align: center;
+  border-bottom: 2px solid #93c5fd;
+}
+
+.edit-banner.source-banner {
+  background: #fef3c7;
+  color: #92400e;
+  border-bottom-color: #fbbf24;
+}
+
+/* === 보고서 콘텐츠 영역 === */
+.report-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.report-content {
+  background: #f7fafc;
+  min-height: calc(100vh - 50px);
+}
+
+.report-content.editable {
+  cursor: text;
+  outline: none;
+}
+
+.report-content.editable:focus {
+  box-shadow: inset 0 0 0 2px #3b82f6;
+}
+
+.report-content.editable *:hover {
+  outline: 1px dashed rgba(59,130,246,0.3);
+  outline-offset: 2px;
+}
+
+/* === 보고서 내부 스타일 (report-content 안에서만 적용) === */
+.report-content .wrap {
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #fff;
+  padding: 14mm 12mm 20mm 12mm;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+.report-content .header {
+  border-bottom: 2.5px solid #1a365d;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.report-content .header-left h1 { font-size: 16px; color: #1a365d; letter-spacing: -0.3px; }
+.report-content .header-left p { font-size: 8px; color: #666; margin-top: 2px; }
+.report-content .header-right { text-align: right; }
+.report-content .header-right .big-num { font-size: 22px; font-weight: bold; color: #1a365d; }
+.report-content .header-right .big-num span { font-size: 10px; font-weight: normal; }
+.report-content .header-right .sub { font-size: 8px; color: #666; }
+
+.report-content .page-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1a365d;
+  border-left: 3.5px solid #1a365d;
+  padding-left: 8px;
+  margin: 18px 0 10px 0;
+}
+
+.report-content .divider {
+  border: none;
+  border-top: 1px dashed #cbd5e0;
+  margin: 16px 0;
+}
+
+.report-content .container { display: flex; gap: 12px; }
+.report-content .left, .report-content .right { width: 50%; }
+
+.report-content .section { margin-bottom: 8px; }
+.report-content .section-title {
+  font-size: 9px;
+  font-weight: bold;
+  color: #1a365d;
+  border-bottom: 1.5px solid #1a365d;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+}
+
+.report-content table { width: 100%; border-collapse: collapse; font-size: 8px; }
+.report-content th { background: #f0f4f8; padding: 3px 4px; text-align: left; font-weight: bold; border-bottom: 1px solid #cbd5e0; color: #2d3748; }
+.report-content td { padding: 3px 4px; border-bottom: 1px solid #edf2f7; }
+.report-content .num { text-align: right; }
+
+.report-content .badge-up { background: #c6f6d5; color: #276749; padding: 1px 5px; border-radius: 2px; font-size: 7px; font-weight: bold; }
+.report-content .badge-down { background: #fed7d7; color: #c53030; padding: 1px 5px; border-radius: 2px; font-size: 7px; font-weight: bold; }
+.report-content .badge-warn { background: #fefcbf; color: #975a16; padding: 1px 5px; border-radius: 2px; font-size: 7px; font-weight: bold; }
+
+.report-content .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 10px; }
+.report-content .kpi-box { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 6px 5px; text-align: center; }
+.report-content .kpi-label { font-size: 7px; color: #718096; margin-bottom: 1px; }
+.report-content .kpi-value { font-size: 13px; font-weight: bold; color: #1a365d; }
+.report-content .kpi-change { font-size: 7px; margin-top: 1px; }
+.report-content .up { color: #276749; }
+.report-content .down { color: #c53030; }
+
+.report-content .box { border-radius: 4px; padding: 7px 8px; margin-bottom: 7px; }
+.report-content .box-red { background: #fff5f5; border-left: 3.5px solid #c53030; }
+.report-content .box-yellow { background: #fffff0; border-left: 3.5px solid #d69e2e; }
+.report-content .box-green { background: #f0fff4; border-left: 3.5px solid #38a169; }
+.report-content .box-blue { background: #ebf8ff; border-left: 3.5px solid #3182ce; }
+.report-content .box-gray { background: #f7fafc; border-left: 3.5px solid #718096; }
+.report-content .box-dark { background: #1a365d; color: white; border-radius: 4px; }
+
+.report-content .box-title { font-weight: bold; margin-bottom: 4px; font-size: 9px; }
+.report-content .box-title.red { color: #c53030; }
+.report-content .box-title.yellow { color: #975a16; }
+.report-content .box-title.green { color: #276749; }
+.report-content .box-title.blue { color: #2b6cb0; }
+
+.report-content ul { padding-left: 12px; margin: 0; }
+.report-content li { margin-bottom: 2px; line-height: 1.35; font-size: 8px; }
+.report-content li ul { margin-top: 1px; }
+
+.report-content .text-red { color: #c53030; }
+.report-content .text-green { color: #276749; }
+
+.report-content .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+
+.report-content .insight-box { background: #ebf4ff; border: 1px solid #90cdf4; border-radius: 4px; padding: 6px 8px; margin-top: 6px; }
+.report-content .insight-title { font-size: 8px; font-weight: bold; color: #2b6cb0; margin-bottom: 3px; }
+
+.report-content .highlight-row { background: #e6fffa; }
+.report-content .danger-row { background: #fed7d7; }
+.report-content .warn-row { background: #fef3c7; }
+.report-content .success-row { background: #c6f6d5; }
+.report-content .total-row { background: #f0f4f8; font-weight: bold; }
+
+.report-content .report-nav {
+  position: sticky;
+  top: 46px;
+  background: linear-gradient(135deg, #1a365d, #2b6cb0);
+  padding: 8px 15px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.report-content .report-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 9px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.report-content .report-nav a:hover { background: rgba(255,255,255,0.2); }
+
+.report-content .footer {
+  margin-top: 20px;
+  padding-top: 8px;
+  border-top: 1.5px solid #cbd5e0;
+  font-size: 7px;
+  color: #a0aec0;
+  text-align: center;
+}
+
+/* === 소스 에디터 === */
+.source-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+  background: #1e1e1e;
+}
+
+.source-editor {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d4d4d4;
+  background: #1e1e1e;
+  border: none;
+  outline: none;
+  resize: none;
+  tab-size: 2;
+  white-space: pre;
+  overflow: auto;
+}
+
+/* === 토스트 알림 === */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 10000;
+  animation: toastIn 0.3s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* === 맨 위로 버튼 === */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1a365d;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  transition: background 0.2s;
+  z-index: 999;
+}
+
+.scroll-top-btn:hover { background: #2b6cb0; }
+
+/* === 인쇄 스타일 === */
+@media print {
+  .toolbar, .edit-banner, .scroll-top-btn, .toast { display: none !important; }
+  body { background: white; }
+  .report-content .wrap { box-shadow: none; }
+  .report-content .report-nav { display: none; }
+}
+
+/* === 반응형 === */
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 6px 10px;
+    gap: 4px;
+  }
+  .toolbar-title { display: none; }
+  .toolbar-divider { display: none; }
+  .toolbar-btn { padding: 5px 8px; font-size: 10px; }
+  .report-content .container { flex-direction: column; }
+  .report-content .left, .report-content .right { width: 100%; }
+  .report-content .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .report-content .wrap { padding: 10px 8px 20px 8px; }
 }
