@@ -42,7 +42,7 @@ export const REPORT_HTML = `
           <li><strong>제휴몰 할인율 상한제 도입</strong>
             <ul>
               <li>제휴몰 할인율 53.0%(YoY +24.0%p) → 구조적 저수익 고착화</li>
-              <li>무신사 55.1%, 29CM 47.0%, SSF샵 52.4%로 전 플랫폼 50%대</li>
+              <li>무신사 53.0%, 29CM 48.1%, SSF샵 52.7%로 전 플랫폼 50%대</li>
               <li>조치: 무신사 50%, 29CM 45%, SSF샵 48% 할인 상한 즉시 적용</li>
             </ul>
           </li>
@@ -69,7 +69,7 @@ export const REPORT_HTML = `
           </li>
           <li><strong>자사몰 성장 동력 회복</strong>
             <ul>
-              <li>자사몰 76백만원(MOM -41.5%): 전월 129백만원에서 급락</li>
+              <li>자사몰 76백만원(전월대비 +25.4%): 전월 60백만원에서 성장</li>
               <li>자사몰 전용 혜택 강화(쿠폰 15%, 적립금 5%)</li>
               <li>제휴몰 구매 고객 → 자사몰 VIP 전환 프로그램 운영</li>
             </ul>
@@ -293,7 +293,7 @@ export const REPORT_HTML = `
           <li><strong>할인율 고착화</strong> 35.7%(+11.4%p) — 제휴몰 53%, 아울렛 46.5%, 신발 60.1%</li>
           <li><strong>영업비 폭발</strong> 678백만원(매출 대비 159.3%) — 광고비 260백만(+239%), 임차료 94백만(+1,160%)</li>
           <li><strong>과시즌 재고 161억</strong>(50.3%) — YoY 177%, 소진 불투명</li>
-          <li><strong>자사몰 급락</strong> 76백만원(MOM -41.5%) — 성장 동력 상실</li>
+          <li><strong>자사몰 성장</strong> 76백만원(전월대비 +25.4%) — 성장세 회복</li>
         </ul>
       </div>
 
@@ -337,18 +337,18 @@ export const REPORT_HTML = `
           <ul>
             <li><strong>할인율:</strong> 25.6% — 한남 19.6%, 롯데월드 33.6%, 코엑스 23.1%</li>
             <li><strong>직접이익:</strong> -109백만원, 이익률 -104.6% (전 매장 적자)</li>
-            <li><strong>매장:</strong> 5개(+2개), 점당매출 23백만원(YoY 92%)</li>
+            <li><strong>매장:</strong> +2개, 한남점, 신사옥강남점</li>
           </ul>
           
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">매장별 실적 (전 매장 적자)</div>
           <table style="margin-top:2px;">
             <tbody>
-            <tr><th>매장명</th><th class="num">매출</th><th class="num">직접이익</th><th class="num">이익률</th><th class="num">할인율</th></tr>
-            <tr class="warn-row"><td>한남점(직)</td><td class="num">39</td><td class="num text-red">-49</td><td class="num">-125.6%</td><td class="num">19.6%</td></tr>
-            <tr><td>롯데월드(직)</td><td class="num">39</td><td class="num text-red">-15</td><td class="num">-38.5%</td><td class="num">33.6%</td></tr>
-            <tr><td>스타필드코엑스(직)</td><td class="num">21</td><td class="num text-red">-13</td><td class="num">-61.9%</td><td class="num">23.1%</td></tr>
-            <tr class="danger-row"><td>스타필드수원(직)</td><td class="num">9</td><td class="num text-red"><strong>-32</strong></td><td class="num">-355.6%</td><td class="num">27.2%</td></tr>
-            <tr><td>강남사옥(직)</td><td class="num">6</td><td class="num text-red">-1</td><td class="num">-</td><td class="num">2.5%</td></tr>
+            <tr><th>매장명</th><th class="num">실판매액</th><th class="num">직접이익</th><th class="num">이익률</th><th class="num">할인율</th></tr>
+            <tr class="warn-row"><td>한남점(직)</td><td class="num">39</td><td class="num text-red">-49</td><td class="num">-136.9%</td><td class="num">19.6%</td></tr>
+            <tr><td>롯데월드(직)</td><td class="num">39</td><td class="num text-red">-15</td><td class="num">-41.4%</td><td class="num">33.6%</td></tr>
+            <tr><td>스타필드코엑스(직)</td><td class="num">21</td><td class="num text-red">-13</td><td class="num">-69.7%</td><td class="num">23.1%</td></tr>
+            <tr class="danger-row"><td>스타필드수원(직)</td><td class="num">9</td><td class="num text-red"><strong>-31</strong></td><td class="num">-396.7%</td><td class="num">27.2%</td></tr>
+            <tr><td>강남사옥(직)</td><td class="num">6</td><td class="num text-red">-1</td><td class="num">-9.3%</td><td class="num">2.5%</td></tr>
             </tbody>
           </table>
           
@@ -356,7 +356,7 @@ export const REPORT_HTML = `
           <ul style="margin-top:2px;font-size:7px;">
             <li>한남 플래그십: 매출 39백만원으로 롯데월드와 동률 — 매출 성장을 통한 BEP 달성이 핵심 과제</li>
             <li>스타필드수원: 매출 대비 직접이익 -355.6%로 최악의 효율, 임대료 재협상 필수</li>
-            <li>기존 매장 잠식: 롯데월드 MOM -27.8%, 코엑스 MOM -48.8% 급락</li>
+            <li>기존 매장 잠식: 롯데월드 전월대비 -27.8%, 코엑스 전월대비 -48.8% 급락</li>
           </ul>
         </div>
 
@@ -365,24 +365,25 @@ export const REPORT_HTML = `
           <ul>
             <li><strong>할인율:</strong> 53.0%(전년 29.0%, +24.0%p) — 전 채널 최고</li>
             <li><strong>직접이익:</strong> +27백만원, 이익률 26.6%</li>
-            <li><strong>수수료율:</strong> 무신사 29.8%, 29CM 33.9%</li>
+            <li><strong>수수료율:</strong> 무신사 29.8%, 29CM 30.3%</li>
           </ul>
           
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">매장별 실적</div>
           <table style="margin-top:2px;">
             <tbody>
-            <tr><th>매장명</th><th class="num">매출</th><th class="num">직접이익</th><th class="num">할인율</th><th class="num">수수료</th></tr>
+            <tr><th>매장명</th><th class="num">실판매액</th><th class="num">직접이익</th><th class="num">할인율</th><th class="num">수수료</th></tr>
             <tr><td>무신사</td><td class="num">54</td><td class="num">12</td><td class="num">55.1%</td><td class="num">29.8%</td></tr>
-            <tr><td>29CM</td><td class="num">28</td><td class="num">6</td><td class="num">47.0%</td><td class="num">33.9%</td></tr>
-            <tr class="warn-row"><td>SSF샵</td><td class="num">12</td><td class="num">-</td><td class="num">52.4%</td><td class="num">31.3%</td></tr>
+            <tr><td>29CM</td><td class="num">28</td><td class="num">6</td><td class="num">48.1%</td><td class="num">30.3%</td></tr>
+            <tr class="warn-row"><td>SSF샵</td><td class="num">12</td><td class="num">3</td><td class="num">52.7%</td><td class="num">31.0%</td></tr>
             </tbody>
           </table>
           
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">핵심 인사이트</div>
           <ul style="margin-top:2px;font-size:7px;">
             <li>전월 대비 급락: 전월 189백만원 → 당월 110백만원(-41.3%), 프로모션 종료 영향</li>
-            <li>할인 50%+ 고착화: 무신사 55.1%, SSF샵 52.4%로 구조적 저수익</li>
-            <li>SSF샵 YoY -53.8% 역성장: 파트너십 재검토 필요</li>
+            <li>할인 50%+ 고착화: 무신사 55.1%, SSF샵 52.7%로 구조적 저수익</li>
+            <li>29CM 할인율 개선: 48.1%로 전 플랫폼 중 상대적 양호, 수수료 30.3%로 효율성 제고</li>
+            <li>SSF샵 직접이익 전환: 3백만원 흑자로 전환, 지속 모니터링 필요</li>
           </ul>
         </div>
 
@@ -396,17 +397,17 @@ export const REPORT_HTML = `
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">매장별 실적</div>
           <table style="margin-top:2px;">
             <tbody>
-            <tr><th>매장명</th><th class="num">매출</th><th class="num">점유율</th><th class="num">MOM</th></tr>
-            <tr class="success-row"><td><strong>롯데기흥</strong></td><td class="num"><strong>60</strong></td><td class="num"><strong>73.2%</strong></td><td class="num text-green">+25.0%</td></tr>
-            <tr class="warn-row"><td>롯데이천</td><td class="num">12</td><td class="num">14.6%</td><td class="num text-red">-33.3%</td></tr>
-            <tr class="warn-row"><td>롯데고양</td><td class="num">10</td><td class="num">12.2%</td><td class="num text-red">-16.7%</td></tr>
+            <tr><th>매장명</th><th class="num">실판매액</th><th class="num">점유율</th><th class="num">전월대비</th></tr>
+            <tr class="success-row"><td><strong>롯데기흥</strong></td><td class="num"><strong>60</strong></td><td class="num"><strong>73.2%</strong></td><td class="num text-green">+24.3%</td></tr>
+            <tr class="warn-row"><td>롯데이천</td><td class="num">12</td><td class="num">14.6%</td><td class="num text-red">-34.2%</td></tr>
+            <tr class="warn-row"><td>롯데고양</td><td class="num">10</td><td class="num">12.2%</td><td class="num text-red">-20.1%</td></tr>
             </tbody>
           </table>
           
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">핵심 인사이트</div>
           <ul style="margin-top:2px;font-size:7px;">
             <li>기흥 독주: 아울렛 전체의 73.2%를 단독 견인, 편중 리스크</li>
-            <li>신규 매장 조기 둔화: 이천·고양 오픈 2개월 만에 MOM -33%, -17%</li>
+            <li>신규 매장 조기 둔화: 이천·고양 오픈 2개월 만에 전월대비 -34.2%, -20.1%</li>
           </ul>
         </div>
       </div>
@@ -427,7 +428,7 @@ export const REPORT_HTML = `
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">매장별 실적</div>
           <table style="margin-top:2px;">
             <tbody>
-            <tr><th>매장명</th><th class="num">매출</th><th class="num">직접이익</th><th class="num">YoY</th></tr>
+            <tr><th>매장명</th><th class="num">실판매액</th><th class="num">직접이익</th><th class="num">YoY</th></tr>
             <tr><td>롯데중동</td><td class="num">6</td><td class="num text-red">-7</td><td class="num"><span class="badge-up">+101%</span></td></tr>
             <tr><td>롯데관악</td><td class="num">3</td><td class="num text-red">-6</td><td class="num"><span class="badge-up">+150%</span></td></tr>
             </tbody>
@@ -437,6 +438,7 @@ export const REPORT_HTML = `
           <ul style="margin-top:2px;font-size:7px;">
             <li>채널 기능 실질 상실: 전년 54백만원 → 9백만원(-83%), 데이터 오류 가능성 검증 필요</li>
             <li>잔여 2개 매장 모두 적자이나 YoY 성장세(중동 +101%, 관악 +150%) 회복 중</li>
+            <li><strong>백화점은 빠른 클로징 검토 필요</strong></li>
           </ul>
         </div>
 
@@ -449,9 +451,9 @@ export const REPORT_HTML = `
 
           <div style="font-size:8px;font-weight:bold;margin:6px 0 3px 0;">핵심 인사이트</div>
           <ul style="margin-top:2px;font-size:7px;">
-            <li>전월 대비 -41.5% 급락(129백만원→76백만원): 성장 동력 약화</li>
+            <li>전월 대비 +25.4% 성장(60백만원→76백만원): 성장세 회복</li>
             <li>직접이익률 46.2%로 수수료 無 구조 유지, 수익성 최고 채널</li>
-            <li>제휴몰(110백만원)에 매출 역전 → 자사몰 전용 혜택 강화 시급</li>
+            <li>제휴몰(110백만원)에 매출 역전 → 자사몰 전용 혜택 강화로 점유율 확대 필요</li>
           </ul>
         </div>
 
@@ -472,29 +474,21 @@ export const REPORT_HTML = `
       </div>
 
       <div class="section" style="margin-top:6px;">
-        <div class="section-title">🌐 온라인 채널 수익구조 비교 (L12M)</div>
+        <div class="section-title">🌐 온라인 채널 수익구조 비교 (최근 12개월)</div>
         <table>
           <tbody>
           <tr><th>구분</th><th class="num">자사몰</th><th class="num">제휴몰</th><th class="num">격차</th></tr>
-          <tr><td>매출액</td><td class="num">1,634</td><td class="num">2,396</td><td class="num">1.5배</td></tr>
-          <tr><td>매출성장률</td><td class="num"><span class="badge-down">-17%</span></td><td class="num"><span class="badge-up">+203%</span></td><td class="num">-220%p</td></tr>
+          <tr><td>실판매액</td><td class="num">1,797</td><td class="num">2,636</td><td class="num">1.5배</td></tr>
+          <tr><td>매출성장률</td><td class="num"><span class="badge-down">-24%</span></td><td class="num"><span class="badge-up">+143%</span></td><td class="num">-167%p</td></tr>
           <tr class="highlight-row"><td><strong>직접이익률</strong></td><td class="num"><strong>52.4%</strong></td><td class="num">26.1%</td><td class="num text-green"><strong>+26.3%p</strong></td></tr>
           <tr><td>유통수수료율</td><td class="num text-green">0%</td><td class="num">30.9%</td><td class="num text-green">-30.9%p</td></tr>
           <tr><td>할인율</td><td class="num">30.5%</td><td class="num">50.7%</td><td class="num text-green">-20.2%p</td></tr>
           </tbody>
         </table>
 
-        <table style="margin-top:6px;">
-          <tbody>
-          <tr><th>자사몰 세부</th><th class="num">매출</th><th class="num">이익률</th><th class="num">할인율</th></tr>
-          <tr class="success-row"><td>카페24</td><td class="num">908</td><td class="num"><strong>56.1%</strong></td><td class="num">11.0%</td></tr>
-          <tr><td>온라인쇼핑몰(직)</td><td class="num">726</td><td class="num">47.7%</td><td class="num">45.5%</td></tr>
-          </tbody>
-        </table>
-
         <div class="insight-box">
           <div class="insight-title">💡 인사이트</div>
-          <span style="font-size:8px;">자사몰은 수수료 無 구조로 직접이익률 52.4% 달성(제휴몰 대비 +26.3%p). 카페24(56.1%) 급감(-53.9%) → 온라인쇼핑몰(직)로 카니발라이제이션 추정. 자사몰 매출 회복이 수익성 개선의 핵심 레버.</span>
+          <span style="font-size:8px;">자사몰은 수수료 無 구조로 직접이익률 52.4% 달성(제휴몰 대비 +26.3%p). 카페24(56.1%) 급감(-53.9%)은 카페24에서 자사몰 구축 후 직영몰로 변경한 결과. 자사몰 매출 회복이 수익성 개선의 핵심 레버.</span>
         </div>
       </div>
 
@@ -532,7 +526,7 @@ export const REPORT_HTML = `
             <div class="kpi-change up">전년 23.3% (+7.1%p)</div>
           </div>
           <div class="kpi-box">
-            <div class="kpi-label">M/U 발주배율</div>
+            <div class="kpi-label">M/U</div>
             <div class="kpi-value">3.67</div>
             <div class="kpi-change">전년 3.63 (+0.04)</div>
           </div>
@@ -708,31 +702,20 @@ export const REPORT_HTML = `
       </div>
 
       <div class="box box-green">
-        <div class="box-title green">🏆 직접이익 TOP5 매장</div>
+        <div class="box-title green">🏆 직접이익 흑자 매장</div>
 
-        <div style="font-size:8px;font-weight:bold;margin:5px 0 3px 0;color:#276749;">자사몰 (최고 수익 이익률 46.2%)</div>
         <table style="margin-top:2px;">
           <tbody>
-          <tr><th>매장명</th><th class="num">직접이익</th><th class="num">이익률</th></tr>
-          <tr class="highlight-row"><td><strong>온라인쇼핑몰(직)</strong></td><td class="num"><strong>+32</strong></td><td class="num"><strong>46.2%</strong></td></tr>
-          </tbody>
-        </table>
-
-        <div style="font-size:8px;font-weight:bold;margin:8px 0 3px 0;color:#276749;">제휴몰 (흑자 이익률 26.6%)</div>
-        <table style="margin-top:2px;">
-          <tbody>
-          <tr><th>매장명</th><th class="num">직접이익</th><th class="num">YoY</th><th class="num">이익률</th></tr>
-          <tr class="success-row"><td>무신사</td><td class="num">+12</td><td class="num">+211%</td><td class="num">22.2%</td></tr>
-          <tr><td>29CM</td><td class="num">+6</td><td class="num">N/A</td><td class="num">21.4%</td></tr>
-          </tbody>
-        </table>
-
-        <div style="font-size:8px;font-weight:bold;margin:8px 0 3px 0;color:#276749;">아울렛·면세점</div>
-        <table style="margin-top:2px;">
-          <tbody>
-          <tr><th>매장명</th><th class="num">직접이익</th><th class="num">YoY</th><th class="num">이익률</th></tr>
-          <tr><td>롯데아울렛기흥</td><td class="num">+11</td><td class="num">+378%</td><td class="num">18.3%</td></tr>
-          <tr><td>신라면세용산</td><td class="num">+6</td><td class="num">+47%</td><td class="num">7.8%</td></tr>
+          <tr><th>매장명</th><th class="num">실판매출</th><th class="num">직접이익</th><th class="num">YoY</th><th class="num">이익률</th></tr>
+          <tr class="highlight-row"><td><strong>온라인쇼핑몰(직)</strong></td><td class="num"><strong>76</strong></td><td class="num"><strong>32</strong></td><td class="num">58%</td><td class="num"><strong>46.2%</strong></td></tr>
+          <tr class="success-row"><td>무신사(제휴몰)</td><td class="num">54</td><td class="num">12</td><td class="num">185%</td><td class="num">24.9%</td></tr>
+          <tr><td>29CM(제휴몰)</td><td class="num">28</td><td class="num">6</td><td class="num">신규</td><td class="num">24.1%</td></tr>
+          <tr><td>SSF샵(제휴몰)</td><td class="num">12</td><td class="num">3</td><td class="num">46%</td><td class="num">31.0%</td></tr>
+          <tr><td>SSG닷컴(제휴몰)</td><td class="num">5</td><td class="num">2</td><td class="num">61%</td><td class="num">41.0%</td></tr>
+          <tr><td>더카트골프(제휴몰)</td><td class="num">6</td><td class="num">2</td><td class="num">56%</td><td class="num">37.7%</td></tr>
+          <tr><td>EQL(제휴몰)</td><td class="num">5</td><td class="num">1</td><td class="num">신규</td><td class="num">19.6%</td></tr>
+          <tr><td>롯데ON(제휴몰)</td><td class="num">1</td><td class="num">0</td><td class="num">66%</td><td class="num">31.3%</td></tr>
+          <tr><td>롯데아울렛기흥(직)</td><td class="num">60</td><td class="num">0</td><td class="num">126%</td><td class="num">0.4%</td></tr>
           </tbody>
         </table>
       </div>
@@ -745,7 +728,7 @@ export const REPORT_HTML = `
         <div style="font-size:8px;font-weight:bold;margin:5px 0 3px 0;">직영점 적자 매장 (5개 전원)</div>
         <table style="margin-top:2px;">
           <tbody>
-          <tr><th>매장명</th><th class="num">매출</th><th class="num">직접이익</th><th class="num">할인율</th><th class="num">조치</th></tr>
+          <tr><th>매장명</th><th class="num">실판매출</th><th class="num">직접이익</th><th class="num">할인율</th><th class="num">조치</th></tr>
           <tr class="warn-row"><td><strong>한남점(직)</strong></td><td class="num">39</td><td class="num text-red"><strong>-49</strong></td><td class="num">19.6%</td><td class="num">매출성장→BEP</td></tr>
           <tr class="danger-row"><td>스타필드수원(직)</td><td class="num">9</td><td class="num text-red">-32</td><td class="num">27.2%</td><td class="num">임대료 재협상</td></tr>
           <tr class="warn-row"><td>롯데월드(직)</td><td class="num">39</td><td class="num text-red">-15</td><td class="num">33.6%</td><td class="num">할인율 정상화</td></tr>
