@@ -12,7 +12,8 @@ const fs = require('fs');
   await page.setViewport({ width: 794, height: 1123 });
   
   // 로컬 개발 서버에 접속
-  await page.goto('http://localhost:3000', {
+  const port = process.env.PORT || 3000;
+  await page.goto(`http://localhost:${port}`, {
     waitUntil: 'networkidle0',
     timeout: 60000,
   });
@@ -58,7 +59,7 @@ ${document.body.innerHTML}
 </html>`;
   });
   
-  const outputPath = path.resolve(__dirname, 'ST_26년_01월_경영실적_요약보고서.html');
+  const outputPath = path.resolve(__dirname, 'ST_Report_2026_01.html');
   fs.writeFileSync(outputPath, html, 'utf-8');
   
   console.log(`HTML 저장 완료: ${outputPath}`);
