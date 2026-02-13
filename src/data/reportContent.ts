@@ -19,7 +19,7 @@ export const REPORT_HTML = `
     </div>
     <div class="header-right">
       <div class="big-num">468<span>백만원</span></div>
-      <div class="sub">실판매출 YoY 208% (+243백만원) | 영업이익률 -214.9%</div>
+      <div class="sub">실판매출 YoY 108% (+243백만원) | 영업이익률 -214.9%</div>
     </div>
   </div>
 
@@ -191,7 +191,7 @@ export const REPORT_HTML = `
       <div class="kpi-box">
         <div class="kpi-label">실판매출</div>
         <div class="kpi-value">468백만원</div>
-        <div class="kpi-change up">▲ YoY 208% (+243백만원)</div>
+        <div class="kpi-change up">▲ YoY 108% (+243백만원)</div>
       </div>
       <div class="kpi-box">
         <div class="kpi-label">영업이익</div>
