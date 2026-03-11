@@ -1,5 +1,5 @@
-import ReportViewer from "@/components/ReportViewer";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <ReportViewer />;
+  redirect("/reports/ST_Report_2026_02.html");
 }
