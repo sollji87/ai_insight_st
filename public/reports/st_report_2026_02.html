@@ -136,6 +136,18 @@
       transition: background 0.2s;
     }
     .nav a:hover { background: rgba(255,255,255,0.2); }
+    .nav .month-link {
+      border: 1px solid rgba(255,255,255,0.45);
+      font-weight: bold;
+      letter-spacing: 0.2px;
+    }
+    .nav .month-link.active-month { background: rgba(255,255,255,0.3); }
+    .nav .month-sep {
+      color: rgba(255,255,255,0.7);
+      align-self: center;
+      font-size: 9px;
+      user-select: none;
+    }
     
     .scroll-top {
       position: fixed;
@@ -176,6 +188,9 @@
 <body>
 
 <div class="nav" id="top">
+  <a class="month-link" href="st_report_2026_01.html">26.01</a>
+  <a class="month-link active-month" href="st_report_2026_02.html">&#10003; 26.02</a>
+  <span class="month-sep">|</span>
   <a href="#sec1">🎯 전략 & Action</a>
   <a href="#sec2">📊 Executive Summary</a>
   <a href="#sec3">📈 채널분석</a>
@@ -188,7 +203,7 @@
   <div class="header">
     <div class="header-left">
       <h1>🎾 SERGIO TACCHINI 브랜드 2026년 2월 경영 보고서</h1>
-      <p>경영관리팀 FP&A | 보고일: 2026년 3월 11일</p>
+      <p>경영관리팀 FP&A | 보고일: 2026년 3월 16일</p>
     </div>
     <div class="header-right">
       <div class="big-num">358<span>백만원</span></div>
@@ -204,25 +219,40 @@
       <div class="box box-red">
         <div class="box-title red">⚡ 즉시 실행 (1개월 내)</div>
         <ul>
+          <li><strong>스타필드수원 3월 말 철수 확정</strong>
+            <ul>
+              <li>후속 MD 부재로 철수 결정, 예상 위약금 약 1.1억원 발생</li>
+              <li>직영점 4→3개 체제 전환 (한남·코엑스·롯데월드 + 강남사옥)</li>
+            </ul>
+          </li>
           <li><strong>제휴몰 매출 이탈 긴급 대응</strong>
             <ul>
               <li>무신사 YoY -52.4% (84→40백만), SSG닷컴 -88.6%, SSF샵 -67.7%</li>
-              <li>29CM +266.7% 유일 성장 → 감성/프리미엄 채널 MD 확대 집중</li>
-              <li>조치: 무신사 노출 전략 재검토, 29CM 기획전 빈도 증가</li>
+              <li>29CM +266.7% 유일 성장 → 라이프스타일 채널 MD 확대 집중</li>
+              <li>대행사(리컴퍼니) 성과 부진 → 디지털 본부 내 운영 내재화 준비</li>
+              <li>이월 재고 약 50억원 소진 계획을 대행사에 요청, 4월부터 프로모션 진행</li>
+              <li>3월 네이버 스토어 입점 완료, 월별 브랜드 데이 진행 예정</li>
             </ul>
           </li>
-          <li><strong>직영점 적자 구조 긴급 점검</strong>
+          <li><strong>한남점 3월 매출 반등 집중</strong>
             <ul>
-              <li>직영 5개 전원 적자, 당월 합산 -128백만원 (채널 최대 부담)</li>
-              <li>한남점 -63백만 (플래그십), 스타필드수원 -33백만, 롯데월드 -17백만</li>
-              <li>조치: 매장별 고정비 구조 재검토, 한남점 매출 성장 통한 BEP 달성 로드맵 수립</li>
+              <li>2월 매출 26백만 (10일간 공사 영업중지 영향으로 저조)</li>
+              <li>3월 목표: 7,000만원 / 손익분기점(BEP): 월 1억원</li>
+              <li>JDC카드 연계 프로모션 기획, 브랜드 이벤트 거점화 추진</li>
             </ul>
           </li>
-          <li><strong>자사몰 매출 급감 대응</strong>
+          <li><strong>자사몰 리브랜딩 & 트래픽 회복</strong>
             <ul>
-              <li>자사몰 64백만 (YoY -54.3%), 카페24→온라인쇼핑몰(직) 전환 과도기</li>
-              <li>직접이익률 40.1%로 전 채널 최고 → 트래픽 회복이 이익 개선 핵심 레버</li>
-              <li>조치: 자사몰 전용 혜택 강화, SNS 연계 트래픽 유입 캠페인</li>
+              <li>자사몰 64백만 (YoY -54%), 직접이익률 40.1%로 전 채널 최고</li>
+              <li>리브랜딩 필요성 제기, 낮은 전환율 개선 과제</li>
+              <li>광고 유입 고객을 제휴몰로 유도하는 방안 검토 중</li>
+            </ul>
+          </li>
+          <li><strong>광고비 효율성(ROAS) 관리 강화</strong>
+            <ul>
+              <li>2월 광고비 약 1억원 (온라인 7,500만, 자사몰·무신사·29CM에 6,400만)</li>
+              <li>사이트 유입 +70~80% 증가했으나 전환율 낮음 → 매출 대비 광고비 과다</li>
+              <li>SS 시즌 초반 브랜딩 강화를 위해 기존 기조 유지하되, ROAS 보고 체계 구축</li>
             </ul>
           </li>
         </ul>
@@ -231,23 +261,30 @@
       <div class="box box-yellow">
         <div class="box-title yellow">📋 단기 실행 (1분기 내)</div>
         <ul>
+          <li><strong>3월 매출 목표: 7억원 (26SS 정상상품 4~5억)</strong>
+            <ul>
+              <li>26SS 발주 총 68억원, 시즌 마감 판매율 50% 목표</li>
+              <li>아이템 확장: 스커트·피케 중심 → 트랙 셋업·팬츠 등 셋업류로 주력 확대</li>
+              <li>플리츠 스커트 스타일 2개→4~5개 확대, 연계 상의 동시 기획</li>
+              <li>3~5월 면세·한남·온라인 채널 간 협업 통한 판매 시너지 창출</li>
+            </ul>
+          </li>
+          <li><strong>이월 SS 재고 100억원 소진 계획</strong>
+            <ul>
+              <li>온라인 50억 + 오프라인 50억 각 50%씩 소진 필요</li>
+              <li>오프라인은 기흥점(월 1억) 외 소진처 부족 → 온라인 비중 확대 불가피</li>
+              <li>제휴몰 이월 재고 50억원 → 4월 프로모션 진행 (쿠폰 비용 대행사 마진 내 처리)</li>
+            </ul>
+          </li>
           <li><strong>아울렛 고성장 모멘텀 확대</strong>
             <ul>
               <li>아울렛 81백만 (YoY +97%), 기흥 59백만(+43.9%) 핵심 거점</li>
               <li>이천·고양 신규 안착 초기 → 기흥 성공 모델 복제 추진</li>
             </ul>
           </li>
-          <li><strong>할인율 구조 정상화 프로젝트</strong>
+          <li><strong>ST위크 프로모션 (6월, 작년 5월 대비 변경)</strong>
             <ul>
-              <li>전체 할인율 36.5% (YoY -2.6%p 개선), 단 제휴몰 49.8%, 아울렛 49.8% 고착</li>
-              <li>무신사 할인율 58.5%(+3.4%p) → 할인 상한선 설정 필요</li>
-              <li>자사몰 8.2%, 면세점 6.3%로 정가 판매 구조 우수 → 벤치마크</li>
-            </ul>
-          </li>
-          <li><strong>26SS 차기시즌 선행 투자 관리</strong>
-            <ul>
-              <li>차기시즌 의류 109백만 (YoY +46%), 직접이익 -70백만 (이익률 -70.9%)</li>
-              <li>선행 MD/생산 비용 집중 구간 → 비용 계상 시점 검증 필요</li>
+              <li>할인율 축소 운영 예정, 단 5월 매출 감소 우려 → 대응 방안 논의 필요</li>
             </ul>
           </li>
         </ul>
@@ -470,7 +507,7 @@
           <li>과시즌 의류 45% 비중 — 시즌 전환기 재고 소진 작동 중</li>
           <li>차기시즌(26SS) 109백만원(+46%) — S/S 시즌 선행 투자 본격화</li>
           <li>아울렛이 유일한 고성장(+97%) 채널, 면세점 S/S 시즌 반등 기대</li>
-          <li>29CM +266.7% — 프리미엄 감성 채널에서 브랜드 수요 확인</li>
+          <li>29CM +266.7% — 라이프스타일 채널에서 브랜드 수요 확인</li>
         </ul>
       </div>
     </div>
@@ -741,20 +778,20 @@
           <tr><td>무신사(제휴몰)</td><td>제휴몰</td><td class="num">40</td><td class="num">+7</td><td class="num">19.7%</td></tr>
           <tr><td>29CM(제휴몰)</td><td>제휴몰</td><td class="num">22</td><td class="num">+4</td><td class="num">17.8%</td></tr>
           <tr><td>현대아울렛김포(특판)</td><td>백화점</td><td class="num">8</td><td class="num">+3</td><td class="num">36.9%</td></tr>
-          <tr><td>현대아울렛김포(직)_특판V</td><td>아울렛</td><td class="num">0</td><td class="num">+3</td><td class="num">N/A</td></tr>
+          <tr><td>현대아울렛김포(직)_특판V</td><td>아울렛</td><td class="num">0</td><td class="num">+3</td><td class="num">신규</td></tr>
         </table>
       </div>
 
       <div class="box box-blue">
         <div class="box-title blue">🎾 한남 플래그십 BEP 로드맵</div>
         <ul style="font-size:7.5px;">
-          <li><strong>현황:</strong> 당월 매출 26백만, 직접이익 -63백만 (개점 6개월차)</li>
+          <li><strong>현황:</strong> 2월 매출 26백만 (10일간 공사 영업중지 영향으로 저조)</li>
+          <li><strong>3월 목표:</strong> 7,000만원 / 손익분기점(BEP): 월 1억원</li>
           <li><strong>강점 ①</strong> 단체 비중 0% — 100% 개인 고객 기반의 건강한 매출 구조</li>
           <li><strong>강점 ②</strong> F/W 아이템 경쟁력 확인 — 다운(4,956만), 맨투맨(4,152만), 니트(2,978만)</li>
           <li><strong>강점 ③</strong> 26SS 시즌 전환 76% (전 채널 최고속) → S/S 매출 반등 선행지표</li>
           <li><strong>강점 ④</strong> 높은 객단가 — 다운점퍼 평균 27.4만원, 니트가디건 18.4만원</li>
-          <li><strong>BEP 전략:</strong> S/S 시즌(3~7월) 매출 월 50백만원 달성 시 직접이익 흑자 전환 가능</li>
-          <li><strong>핵심 액션:</strong> 브랜드 이벤트 거점화, VIP 고객 관리, 플래그십 한정 상품 운영</li>
+          <li><strong>핵심 액션:</strong> JDC카드 연계 프로모션, 브랜드 이벤트 거점화, 3~5월 면세·온라인 채널 협업</li>
         </ul>
       </div>
     </div>
@@ -765,50 +802,52 @@
         
         <div style="font-size:8px;font-weight:bold;margin:5px 0 3px 0;">직영점 (전원 적자, 합산 -128백만원)</div>
         <table style="margin-top:2px;">
-          <tr><th>매장명</th><th class="num">실판</th><th class="num">직접이익</th><th class="num">이익률</th><th>비고</th></tr>
-          <tr class="warn-row"><td><strong>한남점(직)</strong></td><td class="num">26</td><td class="num text-red"><strong>-63</strong></td><td class="num">-265.9%</td><td>플래그십, BEP 목표</td></tr>
-          <tr class="danger-row"><td>스타필드수원(직)</td><td class="num">7</td><td class="num text-red">-33</td><td class="num">-499.9%</td><td>YoY +2.9% 미미 개선</td></tr>
-          <tr class="danger-row"><td>롯데월드(직)</td><td class="num">26</td><td class="num text-red">-17</td><td class="num">-72.4%</td><td>YoY +11.9% 개선 중</td></tr>
-          <tr class="danger-row"><td>스타필드코엑스(직)</td><td class="num">21</td><td class="num text-red">-15</td><td class="num">-76.4%</td><td>매출 +27.9% 성장</td></tr>
-          <tr><td>강남사옥(직)</td><td class="num">9</td><td class="num text-red">-1</td><td class="num">-8.5%</td><td>소규모, 손익 경미</td></tr>
+          <tr><th>매장명</th><th class="num">실판</th><th class="num">실판YoY</th><th class="num">직접이익</th><th>비고</th></tr>
+          <tr class="warn-row"><td><strong>한남점(직)</strong></td><td class="num">26</td><td class="num">신규</td><td class="num text-red"><strong>-63</strong></td><td>공사 10일 영업중지, 3월 7천만 목표</td></tr>
+          <tr class="danger-row"><td>스타필드수원(직)</td><td class="num">7</td><td class="num text-red">-22%</td><td class="num text-red">-33</td><td><strong>3월 말 철수 확정</strong> (위약금 1.1억)</td></tr>
+          <tr class="danger-row"><td>롯데월드(직)</td><td class="num">26</td><td class="num text-red">-35%</td><td class="num text-red">-17</td><td>기존 핵심점 이탈</td></tr>
+          <tr class="danger-row"><td>스타필드코엑스(직)</td><td class="num">21</td><td class="num text-green">+28%</td><td class="num text-red">-15</td><td>매출 성장에도 적자 지속</td></tr>
+          <tr><td>강남사옥(직)</td><td class="num">9</td><td class="num">신규</td><td class="num text-red">-1</td><td>소규모, 손익 경미</td></tr>
         </table>
 
         <div style="font-size:8px;font-weight:bold;margin:8px 0 3px 0;">기타 적자 채널</div>
         <table style="margin-top:2px;">
-          <tr><th>매장명</th><th>채널</th><th class="num">실판</th><th class="num">직접이익</th><th>비고</th></tr>
-          <tr><td>신라면세용산</td><td>면세점</td><td class="num">26</td><td class="num text-red">-15</td><td>시즌 +42백만 흑자</td></tr>
-          <tr><td>롯데중동close</td><td>백화점</td><td class="num">2</td><td class="num text-red">-7</td><td>폐점 정산 중</td></tr>
-          <tr><td>롯데관악close</td><td>백화점</td><td class="num">1</td><td class="num text-red">-7</td><td>폐점 정산 중</td></tr>
+          <tr><th>매장명</th><th>채널</th><th class="num">실판</th><th class="num">실판YoY</th><th class="num">직접이익</th><th>비고</th></tr>
+          <tr><td>신라면세용산</td><td>면세점</td><td class="num">26</td><td class="num text-red">-41%</td><td class="num text-red">-15</td><td>시즌 +42백만 흑자</td></tr>
+          <tr><td>롯데중동close</td><td>백화점</td><td class="num">2</td><td class="num">close</td><td class="num text-red">-7</td><td>폐점 정산 중</td></tr>
+          <tr><td>롯데관악close</td><td>백화점</td><td class="num">1</td><td class="num">close</td><td class="num text-red">-7</td><td>폐점 정산 중</td></tr>
         </table>
 
         <ul style="margin-top:5px;font-size:7px;">
-          <li><strong>한남점:</strong> 플래그십 스토어로 매출 성장 통한 BEP 달성 목표 (3~5월 S/S 반등 기대)</li>
-          <li><strong>개선 방향:</strong> 코엑스(+27.9%), 롯데월드(+11.9%) 매출 회복 추세 확인</li>
+          <li><strong>수원점:</strong> 3월 말 철수 확정 (후속 MD 부재), 위약금 약 1.1억원 발생 예상</li>
+          <li><strong>한남점:</strong> 2월 10일 공사 영업중지 영향. 3월 목표 7,000만원, BEP 월 1억원</li>
           <li><strong>신라면세:</strong> 당월 비수기 부진이나 시즌 누적 +42백만원 흑자 유지</li>
+          <li><strong>백화점:</strong> 현재까지 약 10개 매장 철수 완료, 2월 말 close 완료</li>
         </ul>
       </div>
 
       <div class="box box-yellow">
-        <div class="box-title yellow">📊 즉시 조치사항</div>
+        <div class="box-title yellow">📊 3월 핵심 Action Items</div>
         <table style="margin-top:4px;">
-          <tr><th>조치</th><th>대상</th><th>목표</th></tr>
-          <tr><td>한남점 S/S 매출 촉진</td><td>직영점</td><td>월 50백만 BEP</td></tr>
-          <tr><td>29CM MD 확대 기획전</td><td>제휴몰</td><td>월 30백만 안착</td></tr>
-          <tr><td>무신사 노출 전략 재검토</td><td>제휴몰</td><td>할인율 50% 이하</td></tr>
-          <tr><td>자사몰 트래픽 캠페인</td><td>자사몰</td><td>매출 100백만 회복</td></tr>
-          <tr><td>close 매장 잔여 비용 정리</td><td>백화점</td><td>3월 완료</td></tr>
+          <tr><th>조치</th><th>대상</th><th>목표/기한</th></tr>
+          <tr><td>한남점 JDC카드 프로모션 기획</td><td>직영점</td><td>3월 목표 7,000만, BEP 1억</td></tr>
+          <tr><td>수원점 철수 정리</td><td>직영점</td><td>3월 말 완료</td></tr>
+          <tr><td>이월 재고 소진 프로모션 요청</td><td>제휴몰</td><td>4월 시작, 50억 소진</td></tr>
+          <tr><td>ROAS 보고 체계 구축</td><td>마케팅</td><td>퍼포먼스 광고비·매출 정리</td></tr>
+          <tr><td>자사몰 리브랜딩 검토</td><td>자사몰</td><td>전환율 개선 방안 수립</td></tr>
+          <tr><td>3월 전체 매출</td><td>전체</td><td><strong>7억원 (26SS 4~5억)</strong></td></tr>
         </table>
       </div>
 
       <div class="box box-gray">
         <div class="box-title">📈 매장 효율성 지표 (모니터링)</div>
         <table style="margin-top:4px;">
-          <tr><th>지표</th><th class="num">현재</th><th class="num">1개월 목표</th><th class="num">3개월 목표</th></tr>
-          <tr><td>한남점 월매출</td><td class="num">26백만</td><td class="num">40백만</td><td class="num">50백만</td></tr>
-          <tr><td>직영점 적자 합산</td><td class="num">-128백만</td><td class="num">-80백만</td><td class="num">-40백만</td></tr>
-          <tr><td>제휴몰 할인율</td><td class="num">49.8%</td><td class="num">45%</td><td class="num">40%</td></tr>
-          <tr><td>자사몰 매출</td><td class="num">64백만</td><td class="num">80백만</td><td class="num">120백만</td></tr>
-          <tr><td>영업비율</td><td class="num">202%</td><td class="num">180%</td><td class="num">150%</td></tr>
+          <tr><th>지표</th><th class="num">2월 실적</th><th class="num">3월 목표</th><th class="num">비고</th></tr>
+          <tr><td>전체 매출</td><td class="num">358백만</td><td class="num"><strong>700백만</strong></td><td>26SS 정상 4~5억</td></tr>
+          <tr><td>한남점 월매출</td><td class="num">26백만</td><td class="num"><strong>70백만</strong></td><td>BEP: 월 100백만</td></tr>
+          <tr><td>이월SS 재고 소진</td><td class="num">100억</td><td class="num">-</td><td>온라인 50억+오프 50억</td></tr>
+          <tr><td>수원점 철수</td><td class="num">-33백만</td><td class="num">3월 말</td><td>위약금 1.1억</td></tr>
+          <tr><td>ROAS 보고</td><td class="num">미구축</td><td class="num">3월 내</td><td>퍼포먼스 광고비 정리</td></tr>
         </table>
       </div>
     </div>
